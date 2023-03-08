@@ -7,7 +7,7 @@ const Login = () => {
   return (
     <div className="container-fluid p-0">
       <section className={S.section}>
-        <img src={bg} className="img-fluid" alt="pessoas trabalhando" />
+        <div className={S.banner}><img src={bg} className="img-fluid" alt="pessoas trabalhando" /></div>
         <div className={S.formulario}>
           <img src={logo} className="img-fluid w-50 pb-5" id="image" alt="logo telemetrix" />
           <form className="mb-3 d-flex flex-column w-50">

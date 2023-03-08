@@ -8,7 +8,9 @@ const LoginCliente = () => {
   return (
     <div className="container-fluid p-0">
       <section className={S.section}>
-        <img src={bg} className="img-fluid" alt="pessoas trabalhando" />
+        <div className={S.banner}>
+          <img src={bg} className="img-fluid" alt="pessoas trabalhando" />
+          </div>
         <div className={S.formulario}>
           <img src={logo} className="img-fluid w-50 p-5" alt="logo telemetrix" />
           <img src={logoCliente} className="img-fluid w-50 p-5 pb-0" alt="logo do cliente" />
