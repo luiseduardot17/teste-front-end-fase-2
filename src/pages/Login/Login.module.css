@@ -35,10 +35,14 @@
 
     .banner {
         order: 2;
+        background-image: url(../../assets/images/bg-login2.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: top;
     }
 
     .banner img {
-        width: 100%;
+        display: none;
     }
 
 
@@ -63,10 +67,8 @@
 
     .banner {
         order: 2;
-    }
-
-    .banner img {
-        height: 100%;
+        background-size: cover;
+        background-position: center;
     }
 
 }
