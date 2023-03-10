@@ -1,6 +1,5 @@
 import React from 'react'
 import { DelIcon, EditIcon } from '../../../styles/styledIcons'
-import File from "../../../assets/images/file-alt-light@2x.png"
 import Modal from '../../../components/Modal/Modal'
 import Forms from '../../../components/Forms/Forms'
 
@@ -8,7 +7,7 @@ const Usuarios = () => {
     return (
         <div className='container-fluid'>
             <Forms />
-            <table className="table table-light table-striped caption-top">
+            <table className="table table-light table-striped caption-top text-center">
                 <caption className='h3 text-primary fw-bold'>Usuários</caption>
                 <thead className="table bg-secondary text-center">
                     <tr>
@@ -27,7 +26,7 @@ const Usuarios = () => {
                         <td>Sim</td>
                         <td>
                             <div className='d-flex justify-content-evenly'>
-                                <EditIcon src={File} data-bs-toggle="modal" data-bs-target="#modalEdit" />
+                                <EditIcon data-bs-toggle="modal" data-bs-target="#modalEdit" />
                                 <DelIcon data-bs-toggle="modal" data-bs-target="#modalDelete" />
                             </div>
                         </td>
@@ -39,7 +38,7 @@ const Usuarios = () => {
                         <td>Sim</td>
                         <td>
                             <div className='d-flex justify-content-evenly'>
-                                <EditIcon src={File} data-bs-toggle="modal" data-bs-target="#modalEdit" />
+                                <EditIcon data-bs-toggle="modal" data-bs-target="#modalEdit" />
                                 <DelIcon data-bs-toggle="modal" data-bs-target="#modalDelete" />
                             </div>
                         </td>
@@ -51,7 +50,7 @@ const Usuarios = () => {
                         <td>Sim</td>
                         <td>
                             <div className='d-flex justify-content-evenly'>
-                                <EditIcon src={File} data-bs-toggle="modal" data-bs-target="#modalEdit" />
+                                <EditIcon data-bs-toggle="modal" data-bs-target="#modalEdit" />
                                 <DelIcon data-bs-toggle="modal" data-bs-target="#modalDelete" />
                             </div>
                         </td>

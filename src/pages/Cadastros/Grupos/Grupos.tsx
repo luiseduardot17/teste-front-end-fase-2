@@ -1,7 +1,5 @@
 import React from 'react'
-import Forms from '../../../components/Forms/Forms'
 import { AddIcon, DelIcon, EditIcon, FindIcon } from '../../../styles/styledIcons'
-import File from "../../../assets/images/file-alt-light@2x.png"
 import Modal from '../../../components/Modal/Modal'
 
 const Grupos = () => {
@@ -29,7 +27,7 @@ const Grupos = () => {
           </div>
         </form>
       </div>
-      <table className="table table-light table-striped caption-top">
+      <table className="table table-light table-striped caption-top text-center">
         <caption className='h3 text-primary fw-bold'>Grupos</caption>
         <thead className="table bg-secondary text-center">
           <tr>
@@ -44,7 +42,7 @@ const Grupos = () => {
             <td>Sim</td>
             <td>
               <div className='d-flex justify-content-evenly'>
-                <EditIcon src={File} data-bs-toggle="modal" data-bs-target="#modalEdit" />
+                <EditIcon data-bs-toggle="modal" data-bs-target="#modalEdit" />
                 <DelIcon data-bs-toggle="modal" data-bs-target="#modalDelete" />
               </div>
             </td>
@@ -54,7 +52,7 @@ const Grupos = () => {
             <td>Sim</td>
             <td>
               <div className='d-flex justify-content-evenly'>
-                <EditIcon src={File} data-bs-toggle="modal" data-bs-target="#modalEdit" />
+                <EditIcon data-bs-toggle="modal" data-bs-target="#modalEdit" />
                 <DelIcon data-bs-toggle="modal" data-bs-target="#modalDelete" />
               </div>
             </td>
@@ -64,7 +62,7 @@ const Grupos = () => {
             <td>Não</td>
             <td>
               <div className='d-flex justify-content-evenly'>
-                <EditIcon src={File} data-bs-toggle="modal" data-bs-target="#modalEdit" />
+                <EditIcon data-bs-toggle="modal" data-bs-target="#modalEdit" />
                 <DelIcon data-bs-toggle="modal" data-bs-target="#modalDelete" />
               </div>
             </td>
