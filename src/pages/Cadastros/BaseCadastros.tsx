@@ -6,11 +6,9 @@ const BaseCadastros = () => {
     return (
         <div>
             <Sidebar />
-
             <div>
                 <Outlet />
             </div>
-
         </div>
     )
 }
