@@ -13,6 +13,7 @@ export const AddIcon = styled(FaRegPlusSquare)`
     width: 25px;
     height: 25px;
     color:  #005187;
+    cursor: pointer;
 `;
 
 export const RightIcon = styled(AiFillCaretRight)`
