@@ -1,38 +1,16 @@
 import React from 'react'
-import { FindIcon, AddIcon, DelIcon, EditIcon } from '../../../styles/styledIcons'
+import { DelIcon, EditIcon } from '../../../styles/styledIcons'
 import File from "../../../assets/images/file-alt-light@2x.png"
 import Modal from '../../../components/Modal/Modal'
+import Forms from '../../../components/Forms/Forms'
 
 const Usuarios = () => {
     return (
         <div className='container-fluid'>
-            <form className='d-flex justify-content-evenly border border-2 rounded-2 bg-light p-5'>
-                <div className="w-25">
-                    <label htmlFor="Name" className="form-label">Nome</label>
-                    <input type="text" className="form-control" id="Name" required />
-                </div>
-                <div className="w-25">
-                    <label htmlFor="Email" className="form-label">Email</label>
-                    <input type="email" className="form-control" id="Email" required />
-                </div>
-                <div className="w-25">
-                    <label htmlFor="Type" className="form-label">Tipo Usuário</label>
-                    <select className="form-select" aria-label="select-type" id="Type" required>
-                        <option selected>Selecione</option>
-                        <option value="1">Usuario</option>
-                        <option value="2">Administrador</option>
-                    </select>
-                </div>
-                <div className="d-flex align-items-end">
-                    <FindIcon cursor="pointer" />
-                </div>
-                <div className="d-flex align-items-end">
-                    <AddIcon cursor="pointer" />
-                </div>
-            </form>
+            <Forms />
             <table className="table table-light table-striped caption-top">
-                <caption className='h3 text-primary'>Usuarios</caption>
-                <thead className="table-primary text-center">
+                <caption className='h3 text-primary fw-bold'>Usuários</caption>
+                <thead className="table bg-secondary text-center">
                     <tr>
                         <th scope="col">Nome</th>
                         <th scope="col">Email</th>
@@ -47,27 +25,64 @@ const Usuarios = () => {
                         <td>jose.silva@gmail.com</td>
                         <td>Administrador</td>
                         <td>Sim</td>
-                        <td className='text-center'><EditIcon src={File} data-bs-toggle="modal" data-bs-target="#modalEdit" /> <DelIcon data-bs-toggle="modal" data-bs-target="#modalDelete" /></td>
+                        <td>
+                            <div className='d-flex justify-content-evenly'>
+                                <EditIcon src={File} data-bs-toggle="modal" data-bs-target="#modalEdit" />
+                                <DelIcon data-bs-toggle="modal" data-bs-target="#modalDelete" />
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td>Maria Joaquina</td>
                         <td>maria.joaquina@gmail.com</td>
                         <td>Usuario</td>
                         <td>Sim</td>
-                        <td className='text-center'><EditIcon src={File} data-bs-toggle="modal" data-bs-target="#modalEdit" /> <DelIcon data-bs-toggle="modal" data-bs-target="#modalDelete" /></td>
+                        <td>
+                            <div className='d-flex justify-content-evenly'>
+                                <EditIcon src={File} data-bs-toggle="modal" data-bs-target="#modalEdit" />
+                                <DelIcon data-bs-toggle="modal" data-bs-target="#modalDelete" />
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td>Guilherme Pereira</td>
                         <td>guilherme.pereira@gmail.com</td>
                         <td>Administrador</td>
                         <td>Sim</td>
-                        <td className='text-center'><EditIcon src={File} data-bs-toggle="modal" data-bs-target="#modalEdit" /> <DelIcon data-bs-toggle="modal" data-bs-target="#modalDelete" /></td>
+                        <td>
+                            <div className='d-flex justify-content-evenly'>
+                                <EditIcon src={File} data-bs-toggle="modal" data-bs-target="#modalEdit" />
+                                <DelIcon data-bs-toggle="modal" data-bs-target="#modalDelete" />
+                            </div>
+                        </td>
                     </tr>
                 </tbody>
             </table>
-            <Modal titulo={'Edição de Usuário'} conteudo={'forms'} nomeBotao={'Salvar'} nomeId={'modalEdit'} />
-            <Modal titulo={'Deseja Desabilitar o Registro?'} conteudo={''} nomeBotao={'Desabilitar'} nomeId={'modalDelete'} />
 
+            <Modal titulo={'Edição de Usuário'} nomeBotao={'Salvar'} nomeId={'modalEdit'} classe={'modal-dialog modal-dialog-centered modal-xl'}
+                conteudo={<form className='d-flex justify-content-evenly'>
+                    <div>
+                        <label htmlFor="nomeUsuario" className="form-label">Nome</label>
+                        <input type="text" className="form-control border border-tertiary" id="nomeUsuario" required />
+                    </div>
+                    <div className="w-25">
+                        <label htmlFor="emailUsuario" className="form-label">Email</label>
+                        <input type="email" className="form-control border border-tertiary" id="emailUsuario" required />
+                    </div>
+                    <div className="w-25">
+                        <label htmlFor="senhaUsuario" className="form-label">Senha</label>
+                        <input type="password" className="form-control border border-tertiary" id="senhaUsuario" required />
+                    </div>
+                    <div>
+                        <label htmlFor="tipoUsuario" className="form-label">Tipo Usuário</label>
+                        <select className="form-select" aria-label="select-type" id="tipoUsuario" defaultValue="default" required>
+                            <option value="default">Selecione</option>
+                            <option value="1">Usuario</option>
+                            <option value="2">Administrador</option>
+                        </select>
+                    </div>
+                </form>} />
+            <Modal titulo={'Deseja Desabilitar o Registro?'} nomeBotao={'Desabilitar'} nomeId={'modalDelete'} conteudo={<span></span>} classe={'modal-dialog modal-dialog-centered modal-lg'} />
         </div>
     )
 }
