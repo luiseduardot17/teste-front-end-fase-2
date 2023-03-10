@@ -4,6 +4,7 @@ import { BrowserRouter, Routes as Switch } from 'react-router-dom'
 import BaseCadastros from '../pages/Cadastros/BaseCadastros'
 import Clientes from '../pages/Cadastros/Clientes/Clientes'
 import Fornecedores from '../pages/Cadastros/Fornecedores/Fornecedores'
+import Grupos from '../pages/Cadastros/Grupos/Grupos'
 import Usuarios from '../pages/Cadastros/Usuarios/Usuarios'
 import Home from '../pages/Home/Home'
 import Login from '../pages/Login/Login'
@@ -20,6 +21,7 @@ const Routes = () => {
                     <Route path='usuarios' element={<Usuarios />} />
                     <Route path='clientes' element={<Clientes/>} />
                     <Route path='fornecedores' element={<Fornecedores/>} />
+                    <Route path='grupos' element={<Grupos/>} />
                 </Route>
             </Switch>
         </BrowserRouter>
