@@ -1,7 +1,7 @@
 :root {
     --primary: #005187;
     --secondary: #D4E1EB;
-    --tertiary: #F8F8F8;
+    --tertiary: #6C757D;
     --success: #198754;
     --info: #0dcaf0;
     --warning: #ffc107;
@@ -9,8 +9,21 @@
 }
 
 .bg-primary,
-.btn-primary {
+.btn-primary{
     background-color: var(--primary) !important;
+}
+.btn-outline-primary {
+    border-color: var(--primary) !important;
+    color: var(--primary) !important;
+}
+
+.btn-outline-primary:hover{
+    background-color: var(--primary) !important;
+    color: #f8f8f8 !important;
+}
+
+.text-primary {
+    color: var(--primary) !important;
 }
 
 .bg-secondary,
@@ -42,22 +55,22 @@
     background-color: var(--danger) !important;
 }
 
-.nav-link {
-    background-image: linear-gradient(90deg, #f8f9fa, #f8f9fa);
-    background-repeat: no-repeat;
-    background-size: 0% 3px;
-    background-position: left bottom;
-    transition: background-size 500ms ease;
-    cursor: pointer;
-}
-
-.nav-link:hover {
-    background-size: 100% 3px;
-}
-
 .form-control{
     border: 0;
     border-bottom: 3px solid #005187;
 }
 
+.btn-filter{
+    background: transparent;
+    margin: 0;
+    border: 0;
+}
 
+.offcanvas-start{
+    width: 250px !important;
+}
+
+.link{
+    text-decoration: none;
+    font-size: 20px;
+}
