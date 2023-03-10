@@ -1,17 +1,17 @@
-import React from 'react'
 
 interface DadosProps {
     nomeId: string
+    classe: string
     titulo: string
-    conteudo: string
+    conteudo: JSX.Element;
     nomeBotao: string
 }
 
-const Modal = ({ nomeId, titulo, conteudo, nomeBotao }: DadosProps) => {
+const Modal = ({ nomeId, classe, titulo, conteudo, nomeBotao }: DadosProps) => {
     return (
         <div className="modal" tabIndex={-1} id={nomeId}>
-            <div className="modal-dialog modal-dialog-centered modal-lg">
-                <div className="modal-content text-center">
+            <div className={`${classe}`}>
+                <div className="modal-content">
                     <div className="modal-header">
                         <h3 className="modal-title">{titulo}</h3>
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
